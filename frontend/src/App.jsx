@@ -1,35 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section className="bg-blue-900 text-slate-50">
+
+      <div className="container flex flex-col h-screen justify-center">
+      <h2 className="text-3xl px-56 mb-20 text-center">Die Stimmen unserer Kunden</h2>
+
+        <form action="" className="text-xl px-56 flex flex-col gap-4">
+        <div className="form-group flex flex-col">
+            <label className="form-label" htmlFor="email">Ihr Email</label>
+            <input name="email" id="email"  className="text-gray-900 mt-3 p-2 rounded-sm" placeholder="Ihr Email hier"/>
+          </div>
+          <div className="form-group flex flex-col mt-5">
+            <label className="form-label" htmlFor="meinung">Ihre persönliche Erfahrung</label>
+            <textarea name="meinung"
+                      id="meinung" 
+                      rows="4" 
+                      className="text-gray-900 mt-3 p-2 rounded-sm" placeholder="Womit waren Sie zufrieden?Warum würden Sie firmaGmbh weiterempfehlen">
+
+            </textarea>
+          </div>
+          <div className="form-group flex flex-col mt-5">
+            <button type="submit" className="p-2 rounded-md bg-green-700">Bewertung veröffentlichen</button>
+          </div>
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </section>
   )
 }
-
-export default App
