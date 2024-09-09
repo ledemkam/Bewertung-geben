@@ -1,0 +1,17 @@
+POST http://localhost:8181/api/client
+Content-Type: application/json
+
+{
+  "email": "ledemkam@mail.de",
+  "telephon": "+23797685200"
+}
+
+###
+
+GET http://localhost:8181/api/client
+
+###
+
+GET http://localhost:8181/api/client/4
+
+###

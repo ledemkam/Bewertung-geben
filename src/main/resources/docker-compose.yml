@@ -1,0 +1,16 @@
+
+services:
+
+  bewertung_db:
+    image: mariadb:10.11.8
+    container_name: bewertung_db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+    ports:
+      - 3307:3306
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8082:8080
