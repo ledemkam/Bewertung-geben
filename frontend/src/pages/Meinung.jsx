@@ -1,10 +1,10 @@
 import { useEffect,useState } from "react";
+import CardAvisItem from "../components/CardAvisItem";
 
 
  const Meinung = () => {
   const[meinung,setMeinung] = useState([])
 
-  console.log(meinung);
   
 
   const fechMeinung = async () => {
@@ -24,7 +24,12 @@ import { useEffect,useState } from "react";
   },[])
   return (
     <div className="container flex flex-col h-screen justify-center">
-      <pre>{JSON.stringify(meinung,null,2)}</pre>
+      <div className="grid grid-cols-3 gap-4">
+
+      {meinung.map((items) => 
+        <CardAvisItem key={items.id} items={items}/>
+      )}
+    </div>
     </div>
   )
 }

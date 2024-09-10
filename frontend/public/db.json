@@ -1,5 +1,5 @@
-{
-  "meinung":[
+
+  [
     {
       "id": 1,
       "email": "ledemkam@mail.de",
@@ -12,14 +12,13 @@
     },
     
     {
-      "id": 1,
+      "id": 3,
       "email": "RICO@mail.de",
       "meinung": "TAKE IT"
     },
     {
-      "id": 1,
+      "id": 4,
       "email": "LOU@ya.de.de",
       "meinung": "lop is good"
     }
   ]
-}
